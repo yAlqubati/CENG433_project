@@ -1,0 +1,5 @@
+
+# i don't want to have the node_modules folder in my repository, its under the BasitaBackend folder
+BasitaBackend/node_modules
+BasitaBackend/.vscode
+BasitaBackend/.env
