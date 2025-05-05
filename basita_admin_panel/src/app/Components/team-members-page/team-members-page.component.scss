@@ -1,0 +1,177 @@
+.members-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+
+  h1 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  // Button Base Styles
+  .button-base {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    color: white;
+  }
+
+  // Navigation and Logout Buttons
+  .nav-button {
+    @extend .button-base;
+    background-color: #0073e6;
+
+    &:hover {
+      background-color: #0066cc;
+    }
+  }
+
+  .logout-button {
+    @extend .button-base;
+    background-color: #f44336;
+
+    &:hover {
+      background-color: #e53935;
+    }
+  }
+
+  // Members Table Styles
+  .members-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+
+    th,
+    td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f4f4f4;
+      font-weight: bold;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    // Image style
+    img {
+      width: 50px;      // Fixed width
+      height: 50px;     // Fixed height
+      object-fit: cover; // Cover the area while maintaining aspect ratio
+      border-radius: 50%; // Optional: to make it circular
+    }
+
+    button {
+      @extend .button-base;
+
+      &.edit-button {
+        background-color: #4CAF50; // Edit button color
+
+        &:hover {
+          background-color: #45a049;
+        }
+      }
+
+      &.delete-button {
+        background-color: #f44336; // Delete button color
+
+        &:hover {
+          background-color: #e53935;
+        }
+      }
+    }
+
+    a {
+      color: #0073e6;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Form Container Styles
+  .form-container {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      font-size: 0.9rem;
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="url"],
+    input[type="number"],
+    input[type="file"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+
+      &:focus {
+        border-color: #0073e6;
+        outline: none;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    // Submit and Cancel Button Styles
+    .submit-button {
+      @extend .button-base;
+      background-color: #4CAF50; // Add member button color
+
+      &:hover {
+        background-color: #45a049;
+      }
+    }
+
+    .cancel-button {
+      @extend .button-base;
+      background-color: #f44336; // Cancel button color
+
+      &:hover {
+        background-color: #e53935;
+      }
+    }
+  }
+
+  // Add Member Button Styles
+  .add-member-button {
+    display: block;
+    margin: auto;
+    @extend .button-base;
+    background-color: #0073e6; // Add new member button color
+
+    &:hover {
+      background-color: #0066cc;
+    }
+  }
+}

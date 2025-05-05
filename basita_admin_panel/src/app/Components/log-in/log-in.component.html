@@ -1,0 +1,51 @@
+<div class="login-container">
+  <div class="login-box">
+    <h2>BASITA ADMIN PANEL</h2>
+    
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <!-- Username -->
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          class="form-control"
+          required
+          [(ngModel)]="admin.username"
+          #username="ngModel"
+        />
+        <div *ngIf="username.invalid && username.touched" class="error-message">
+          Username is required.
+        </div>
+      </div>
+      
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          class="form-control"
+          required
+          [(ngModel)]="admin.password"
+          #password="ngModel"
+        />
+        <div *ngIf="password.invalid && password.touched" class="error-message">
+          Password is required.
+        </div>
+      </div>
+
+      <!-- Login Button -->
+      <button type="submit" class="btn btn-primary" [disabled]="loginForm.invalid">
+        Log In
+      </button>
+    </form>
+
+    <!-- Error Message -->
+    <div *ngIf="loginError" class="error-message">
+      Invalid username or password. Please try again.
+    </div>
+  </div>
+</div>

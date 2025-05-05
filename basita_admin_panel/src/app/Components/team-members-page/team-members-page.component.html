@@ -1,0 +1,93 @@
+<div class="members-container">
+  <h1>Team Member Management</h1>
+
+  <div><button class="nav-button" (click)="goto('home')">Home</button></div>
+  <div><button class="logout-button" (click)="logout()">Log out</button></div>
+
+  <!-- Team Member Table -->
+  <table class="members-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Image</th>
+        <th>LinkedIn</th>
+        <th>GitHub</th>
+        <th>Order of Display</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let member of teamMembers">
+        <td>{{ member.name }}</td>
+        <td>{{ member.position }}</td>
+        <td><img [src]="getTeamMemberImage(member.image ? member.image.toString() : '')" alt="member image" /></td>
+        <td><a [href]="member.linkedIn" target="_blank" rel="noopener noreferrer">{{ member.linkedIn }}</a></td>
+        <td><a [href]="member.github" target="_blank" rel="noopener noreferrer">{{ member.github }}</a></td>
+        
+        <td>{{ member.orderOfDisplay }}</td>
+        <td>
+          <button class="edit-button" (click)="onEditMember(member)">Edit</button>
+          <button class="delete-button" (click)="deleteTeamMember(member.name)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Add Member Form -->
+  <div *ngIf="showAddMemberForm" class="form-container">
+    <h2>Add New Member</h2>
+    <form (ngSubmit)="onSubmitAddMember()">
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="newMember.name" name="name" required />
+
+      <label>Position:</label>
+      <input type="text" [(ngModel)]="newMember.position" name="position" required />
+
+      <label>LinkedIn:</label>
+      <input type="url" [(ngModel)]="newMember.linkedIn" name="linkedIn" />
+
+      <label>GitHub:</label>
+      <input type="url" [(ngModel)]="newMember.github" name="github" />
+
+      <label>Order of Display:</label>
+      <input type="number" [(ngModel)]="newMember.orderOfDisplay" name="orderOfDisplay" required />
+
+      <label>Image:</label>
+      <input type="file" (change)="onFileChange($event, 'add')" />
+
+      <button class="submit-button" type="submit">Add Member</button>
+      <button class="cancel-button" type="button" (click)="cancelAddMember()">Cancel</button>
+    </form>
+  </div>
+
+  <!-- Update Member Form -->
+  <div *ngIf="showUpdateMemberForm" class="form-container">
+    <h2>Update Member</h2>
+    <form (ngSubmit)="onSubmitUpdateMember()">
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="updateMemberData.name" name="name" required />
+
+      <label>Position:</label>
+      <input type="text" [(ngModel)]="updateMemberData.position" name="position" required />
+
+      <label>LinkedIn:</label>
+      <input type="url" [(ngModel)]="updateMemberData.linkedIn" name="linkedIn" />
+
+      <label>GitHub:</label>
+      <input type="url" [(ngModel)]="updateMemberData.github" name="github" />
+
+      <label>Order of Display:</label>
+      <input type="number" [(ngModel)]="updateMemberData.orderOfDisplay" name="orderOfDisplay" required />
+
+      <label>Image:</label>
+      <input type="file" (change)="onFileChange($event, 'update')" />
+
+      <button class="submit-button" type="submit">Update Member</button>
+      <button class="cancel-button" type="button" (click)="cancelUpdateMember()">Cancel</button>
+    </form>
+  </div>
+
+  <!-- Add Member Button -->
+  <button class="add-member-button" (click)="onClickAddMember()">Add New Member</button>
+</div>

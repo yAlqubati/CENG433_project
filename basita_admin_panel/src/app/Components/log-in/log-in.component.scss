@@ -1,0 +1,101 @@
+// Define the background color and style for the entire page
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Jomhuria', sans-serif; // Include your font
+    background-color: #f4f7fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; // Full screen height
+  }
+  
+  .login-box {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; // Max width for the login box
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #333;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+  }
+  
+  label {
+    display: block;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #007bff; // Blue color on focus
+  }
+  
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+  }
+  
+  // Mobile responsiveness
+  @media (max-width: 480px) {
+    .login-box {
+      padding: 1.5rem;
+      width: 90%;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

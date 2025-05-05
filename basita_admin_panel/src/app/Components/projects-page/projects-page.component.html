@@ -1,0 +1,96 @@
+<div class="projects-container">
+  <h1>Project Management</h1>
+  <div><button class="nav-button" (click)="goto('home')">Home</button></div>
+  <div><button class="logout-button" (click)="logout()">Log out</button></div>
+  <!-- Project Table -->
+  <table class="projects-table">
+    <thead>
+      <tr>
+        <th>Project Name</th>
+        <th>Brief Description</th>
+        <th>Detailed Description</th>
+        <th>Image</th>
+        <th>Language</th>
+        <th>Order of Display</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let project of projects">
+        <td>{{ project.projectName }}</td>
+        <td>{{ project.briefDescription }}</td>
+        <td>{{ project.detailedDescription }}</td>
+        <td><img [src]="getProjectImage(project.image ? project.image.toString() : '')" alt="project image" /></td>
+        <td>{{ project.lang }}</td>
+        <td>{{ project.orderOfDisplay }}</td>
+        <td>
+          <button (click)="onEditProject(project)">Edit</button>
+          <button (click)="deleteProject(project.projectName)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <!-- Add Project Form -->
+  <div *ngIf="showAddProjectForm" class="form-container">
+    <h2>Add New Project</h2>
+    <form (ngSubmit)="onSubmitAdd()">
+      <label>Project Name:</label>
+      <input type="text" [(ngModel)]="newProject.projectName" name="projectName" required />
+      
+      <label>Brief Description:</label>
+      <input type="text" [(ngModel)]="newProject.briefDescription" name="briefDescription" required />
+      
+      <label>Detailed Description:</label>
+      <textarea [(ngModel)]="newProject.detailedDescription" name="detailedDescription"></textarea>
+      
+      <label>Image:</label>
+      <input type="file" (change)="onFileChange($event, 'add')" />
+      
+      <label>Language:</label>
+      <select [(ngModel)]="newProject.lang" name="lang" required>
+        <option value="EN">English</option>
+        <option value="AR">Arabic</option>
+      </select>
+      
+      <label>Order of Display:</label>
+      <input type="number" [(ngModel)]="newProject.orderOfDisplay" name="orderOfDisplay" required />
+      
+      <button type="submit">Add Project</button>
+      <button type="button" (click)="cancelAdd()">Cancel</button>
+    </form>
+  </div>
+  
+  <!-- Update Project Form -->
+  <div *ngIf="showUpdateProjectForm" class="form-container">
+    <h2>Update Project</h2>
+    <form (ngSubmit)="onSubmitUpdate()">
+      <label>Project Name:</label>
+      <input type="text" [(ngModel)]="updateProjectData.projectName" name="projectName" required />
+      
+      <label>Brief Description:</label>
+      <input type="text" [(ngModel)]="updateProjectData.briefDescription" name="briefDescription" required />
+      
+      <label>Detailed Description:</label>
+      <textarea [(ngModel)]="updateProjectData.detailedDescription" name="detailedDescription"></textarea>
+      
+      <label>Image:</label>
+      <input type="file" (change)="onFileChange($event, 'update')" />
+      
+      <label>Language:</label>
+      <select [(ngModel)]="updateProjectData.lang" name="lang" required>
+        <option value="EN">English</option>
+        <option value="AR">Arabic</option>
+      </select>
+      
+      <label>Order of Display:</label>
+      <input type="number" [(ngModel)]="updateProjectData.orderOfDisplay" name="orderOfDisplay" required />
+      
+      <button type="submit">Update Project</button>
+      <button type="button" (click)="cancelUpdate()">Cancel</button>
+    </form>
+  </div>
+  
+  <!-- Add Project Button -->
+  <button (click)="onClickAddProject()" class="add-project-button">Add New Project</button>
+</div>

@@ -1,0 +1,97 @@
+<div class="services-container">
+  <h1>Service Management</h1>
+  <div><button class="nav-button" (click)="goto('home')">Home</button></div>
+  <div><button class="logout-button" (click)="logout()">Log out</button></div>
+
+  <!-- Service Table -->
+  <table class="services-table">
+    <thead>
+      <tr>
+        <th>Service Name</th>
+        <th>Brief Description</th>
+        <th>Detailed Description</th>
+        <th>Image</th>
+        <th>Language</th>
+        <th>Order of Display</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let service of services">
+        <td>{{ service.serviceName }}</td>
+        <td>{{ service.briefDescription }}</td>
+        <td>{{ service.detailedDescription }}</td>
+        <td><img [src]="getServiceImage(service.image ? service.image.toString() : '')" alt="service image" /></td>
+        <td>{{ service.lang }}</td>
+        <td>{{ service.orderOfDisplay }}</td>
+        <td>
+          <button class="edit-button" (click)="onEditService(service)">Edit</button>
+          <button class="delete-button" (click)="onDeleteService(service.serviceName)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <!-- Add Service Form -->
+  <div *ngIf="showAddServiceForm" class="form-container">
+    <h2>Add New Service</h2>
+    <form (ngSubmit)="onSubmitAddService()">
+      <label>Service Name:</label>
+      <input type="text" [(ngModel)]="newService.serviceName" name="serviceName" required />
+      
+      <label>Brief Description:</label>
+      <input type="text" [(ngModel)]="newService.briefDescription" name="briefDescription" required />
+      
+      <label>Detailed Description:</label>
+      <textarea [(ngModel)]="newService.detailedDescription" name="detailedDescription"></textarea>
+      
+      <label>Image:</label>
+      <input type="file" (change)="onFileChange($event, 'add')" />
+      
+      <label>Language:</label>
+      <select [(ngModel)]="newService.lang" name="lang" required>
+        <option value="EN">English</option>
+        <option value="AR">Arabic</option>
+      </select>
+      
+      <label>Order of Display:</label>
+      <input type="number" [(ngModel)]="newService.orderOfDisplay" name="orderOfDisplay" required />
+      
+      <button class="submit-button" type="submit">Add Service</button>
+      <button class="cancel-button" type="button" (click)="cancelAddService()">Cancel</button>
+    </form>
+  </div>
+  
+  <!-- Update Service Form -->
+  <div *ngIf="showUpdateServiceForm" class="form-container">
+    <h2>Update Service</h2>
+    <form (ngSubmit)="onSubmitUpdateService()">
+      <label>Service Name:</label>
+      <input type="text" [(ngModel)]="updateServiceData.serviceName" name="serviceName" required />
+      
+      <label>Brief Description:</label>
+      <input type="text" [(ngModel)]="updateServiceData.briefDescription" name="briefDescription" required />
+      
+      <label>Detailed Description:</label>
+      <textarea [(ngModel)]="updateServiceData.detailedDescription" name="detailedDescription"></textarea>
+      
+      <label>Image:</label>
+      <input type="file" (change)="onFileChange($event, 'update')" />
+      
+      <label>Language:</label>
+      <select [(ngModel)]="updateServiceData.lang" name="lang" required>
+        <option value="EN">English</option>
+        <option value="AR">Arabic</option>
+      </select>
+      
+      <label>Order of Display:</label>
+      <input type="number" [(ngModel)]="updateServiceData.orderOfDisplay" name="orderOfDisplay" required />
+      
+      <button class="submit-button" type="submit">Update Service</button>
+      <button class="cancel-button" type="button" (click)="cancelUpdateService()">Cancel</button>
+    </form>
+  </div>
+  
+  <!-- Add Service Button -->
+  <button class="add-service-button" (click)="onClickAddService()">Add New Service</button>
+</div>

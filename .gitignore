@@ -3,3 +3,53 @@
 BasitaBackend/node_modules
 BasitaBackend/.vscode
 BasitaBackend/.env
+
+# Node modules and dependencies
+basita_admin_panel/node_modules/
+basita_admin_panel/package-lock.json
+basita_admin_panel/yarn.lock
+
+# Angular build outputs
+basita_admin_panel/dist/
+basita_admin_panel/out-tsc/
+basita_admin_panel/coverage/
+basita_admin_panel/.angular/
+
+# IDE and Editor settings
+basita_admin_panel/.vscode/
+basita_admin_panel/.idea/
+basita_admin_panel/*.suo
+basita_admin_panel/*.ntvs*
+basita_admin_panel/*.njsproj
+basita_admin_panel/*.sln
+basita_admin_panel/*.sw?
+
+# Logs and debugging
+basita_admin_panel/npm-debug.log*
+basita_admin_panel/yarn-debug.log*
+basita_admin_panel/yarn-error.log*
+basita_admin_panel/angular.log
+basita_admin_panel/debug.log
+
+# Environment and secret files
+basita_admin_panel/src/environments/environment*.ts
+
+# Temporary files
+basita_admin_panel/.temp/
+basita_admin_panel/tmp/
+basita_admin_panel/.DS_Store
+basita_admin_panel/Thumbs.db
+
+# Compiled files and dependencies
+basita_admin_panel/*.bak
+basita_admin_panel/*.log
+basita_admin_panel/*.tmp
+basita_admin_panel/*.cache
+
+# Firebase (if used)
+basita_admin_panel/.firebase/
+
+# Mac and Linux system files
+basita_admin_panel/*.DS_Store
+basita_admin_panel/*.AppleDouble
+basita_admin_panel/*.LSOverride
