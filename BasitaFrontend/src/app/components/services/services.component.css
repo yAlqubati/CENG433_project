@@ -1,0 +1,220 @@
+
+/* .title
+{
+
+} */
+
+.body
+{
+  position: relative;  
+  background-color: #000E2D;
+  overflow: visible;
+}
+
+.service-section {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    /* width: 70%; */
+    /* height: 100% !important; */
+    /* margin: 0 auto ; */
+    text-align: center;
+    /* background-color: antiquewhite; */
+}
+
+.service-label {
+    color: #006AE1;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 27.5px;
+    letter-spacing: 2px;
+    display: block;
+    width: 100% ;
+}
+
+.service-title {
+    color: white;
+    font-size: 87px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 95.7px;
+    display: block;
+    width: 100% ;
+    margin: 20px auto;
+}
+
+.service-subtitle {
+    color: white;
+    font-size: 57px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 62.7px;
+    display: block;
+    width: 100% ;
+    margin: 20px auto;
+}
+
+.service-description {
+    color: white;
+    font-size: 18px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    line-height: 27.5px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    width: 100% ;
+}
+
+.service-cards-container {
+    margin: 0 auto;
+    width: 70%;
+    
+   
+
+    display: grid; /* Add this */
+    grid-template-columns: repeat(2, 1fr); /* Keep two equal columns */
+    gap: 20px; /* Add spacing between cards */
+    align-items: stretch; /* Ensures equal height */
+    margin-bottom: 3%;
+}
+
+
+.service-cards {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: #000E2D;
+    border-radius: 14px; 
+    text-align: center;
+    height: 500px; /* Set a fixed height */
+     display: flex; 
+     flex-direction: column; 
+    overflow: hidden;
+    
+
+    z-index: 0;
+}
+
+.service-cards::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 14px; 
+    padding: 6px; 
+    background: linear-gradient(45deg, #000E2D 0%, #B514DE 100%);
+    -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+    -webkit-mask-composite: xor;
+   
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.eclips-purple {
+    position: absolute; 
+    top: -300px; 
+    left: -285px  ; 
+    width: 700px;
+    height: 500px;
+    background: #B514DE;
+    border-radius: 713.157px; 
+    opacity: 0.8;
+    filter: blur(167px);
+    z-index: 0;
+    overflow: hidden; /* Prevent it from spilling */
+    /* background-color: #000E2D; */
+  }
+  
+  
+  
+  .eclipse-blue
+  {
+    position: absolute;
+    top: 450px; /* Adjust as per your requirement */
+    margin-left: 80%; /* Adjust as per your requirement */
+  
+    background: #006AE1;
+  
+    opacity: 0.8;
+    filter: blur(167px);
+    z-index: 0;
+    overflow: hidden; /* Prevent it from spilling */
+    background-color: #000E2D;
+  }
+
+@media screen and (max-width: 1268px) {
+    .service-cards-container
+    {
+        /* padding: 10px; */
+        /* display: grid; */
+        grid-template-columns: repeat(1, 1fr);
+       text-align: center;
+       justify-content: center;
+        margin: 0 auto;
+       
+    }
+    .service-cards
+    {
+        max-height: 400px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        /* overflow: scroll; */
+        margin: 0 auto;
+        margin-bottom: 5%;
+        
+    }
+    .service-subtitle {
+        font-size: 30px;
+        line-height: 30px;
+        margin-bottom: -10px;
+    }
+
+    .service-title {
+        font-size: 50px;
+        line-height: 50px;
+        margin-bottom: -10px;
+    }
+
+    .service-description {
+        font-size: 16px;
+        line-height: 24px;
+        /* margin-bottom: -10px; */
+    }
+
+    .service-cards-container
+    {
+        /* padding: 10px; */
+        /* display: grid; */
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 auto;
+    }
+
+    .service-section
+    {
+        margin-top: 3%;
+        margin-bottom: 3%;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto ;
+    }
+    .service-label
+    {
+        font-size: 15px;
+        /* line-height: 14px; */
+        margin-bottom: -25px;
+    }
+
+    .eclips-purple {
+ display: none;
+    }
+
+    .eclipse-blue {
+        display: none;
+    }
+   
+    
+}

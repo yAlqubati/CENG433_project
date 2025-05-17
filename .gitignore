@@ -53,3 +53,52 @@ basita_admin_panel/.firebase/
 basita_admin_panel/*.DS_Store
 basita_admin_panel/*.AppleDouble
 basita_admin_panel/*.LSOverride
+
+# Compiled output
+BasitaFrontend/dist/
+BasitaFrontend/build/
+
+# Angular build artifacts
+BasitaFrontend/.angular/
+
+# Node dependencies
+BasitaFrontend/node_modules/
+
+# Temporary files
+BasitaFrontend/temp/
+BasitaFrontend/tmp/
+
+# IDEs and editors
+BasitaFrontend/.idea/
+BasitaFrontend/.vscode/
+BasitaFrontend/*.sublime-workspace
+BasitaFrontend/*.sublime-project
+
+# Logs
+BasitaFrontend/npm-debug.log*
+BasitaFrontend/yarn-debug.log*
+BasitaFrontend/yarn-error.log*
+
+# OS generated files
+BasitaFrontend/.DS_Store
+BasitaFrontend/Thumbs.db
+
+# Environment files
+BasitaFrontend/.env
+BasitaFrontend/.env.local
+BasitaFrontend/.env.*.local
+
+# Coverage reports
+BasitaFrontend/coverage/
+
+# Compiled TypeScript
+BasitaFrontend/*.tsbuildinfo
+
+# NPM package lock
+BasitaFrontend/package-lock.json
+BasitaFrontend/yarn.lock
+
+# Optional: Ignore testing screenshots/reports if using Cypress or similar
+BasitaFrontend/cypress/screenshots/
+BasitaFrontend/cypress/videos/
+

@@ -1,0 +1,23 @@
+<!-- <div class="card-container">    
+        <div class="">
+          <div class=" ">
+            <h5 class="card-title">{{ service.serviceName }}</h5>
+          </div>
+          <div class="">
+            <h1 class="card-text">{{ service.briefDescription }}</h1>   
+          </div>
+          <div class=" ">
+            <h5 class="text-decripstion">{{ service.detailedDescription }}</h5>
+          </div>
+        </div>
+</div> -->
+
+
+
+<div class="card-container" [ngClass]="{'expanded': isExpanded}" (click)="toggleExpand()">    
+  <div class="card-content">
+      <h5 class="card-title">{{ service.serviceName }}</h5>
+      <h1 class="card-text">{{ service.briefDescription }}</h1>   
+      <h5 class="text-decripstion" [ngClass]="{'show': isExpanded}">{{ service.detailedDescription }}</h5>
+  </div>
+</div>

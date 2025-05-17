@@ -1,0 +1,110 @@
+.profile-card {
+    width: 255.676px;
+    height: 250px;
+    background: #007BFF; /* Use your desired blue color */
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    position: relative;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Roboto';
+
+}
+
+.profile-image-background {
+    background-color: #000E2D;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure the image stays within the circle */
+    position: absolute; /* Position the image above the card */
+    top: -50px; /* Move the image up to overlap the card */
+    flex-shrink: 0;
+}
+
+.profile-image {
+    width: 100%; /* Slightly smaller than the background */
+    height: 100%;
+    border-radius: 50%; /* Make the image circular */
+    overflow: hidden;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure the image covers the entire area without distortion */
+    display: block;
+}
+
+.profile-info {
+    padding-top: 60px; /* Space between image and text to avoid overlap */
+}
+
+.profile-info h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* Container for links */
+.profile-links {
+    display: flex; /* Aligns the links in a row */
+    gap: 15px; /* Adds spacing between the links */
+    justify-content: center; /* Centers the links horizontally */
+    margin-top: 15px; /* Adjust margin as needed */
+}
+
+/* New styles for card links */
+.card-link {
+    display: inline-block; /* Ensures proper inline spacing */
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease; /* Add a hover effect */
+}
+
+.card-link:hover {
+    transform: scale(1.1); /* Slightly enlarges the icon on hover */
+    opacity: 0.8; /* Makes it slightly transparent */
+}
+
+.card-link svg {
+    fill: currentColor; /* Takes color from the link's text color */
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (max-width: 1268px) {
+    .profile-card {
+        /* width: 80%; */
+       height: auto;
+        padding: 20px;
+        text-align: start;
+        margin-top: 40px; 
+
+    }
+    .profile-image-background {
+        width: 95px;
+        height: 95px;
+       
+    }
+    .profile-info {
+        
+        text-align: center;
+    }
+
+   
+    
+}

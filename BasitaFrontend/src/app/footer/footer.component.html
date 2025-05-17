@@ -1,0 +1,64 @@
+<div class="thin-line"></div>
+
+<div class="row" [style.direction]="currentlang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="cta-container">
+    <div class="cta-background"></div>
+    <div class="cta-text">
+      {{ currentlang === 'ar' ? 'نداء للعمل' : 'Call for Action' }}
+    </div>
+    <div class="cta-header">
+      {{ currentlang === 'ar' ? 'هل ترغب في التواصل معنا؟' : 'Would you like to contact us?' }}
+    </div>
+    <div class="cta-button">
+      <button [routerLink]="['/contact-us']">
+        {{ currentlang === 'ar' ? 'تواصل معنا' : 'Contact Us' }}
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="info-container" [style.direction]="currentlang === 'ar' ? 'rtl' : 'ltr'">
+  <div class="title-grid">
+    <div class="title">
+      <p>{{ currentlang === 'ar' ? '' : '' }}</p>
+    </div>
+  </div>
+
+  <div class="content-grid">
+    <div class="item">
+      <div class="title">
+        <p>{{ currentlang === 'ar' ? 'البريد الإلكتروني' : 'Email' }}</p>
+      </div>
+      <div class="content">
+        <a class="link-light link-opacity-75 link-opacity-100-hover text-decoration-none"
+        href="mailto:"></a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">
+        <p>{{ currentlang === 'ar' ? 'روابط التواصل': 'Social' }}</p>
+      </div>
+      <div class="content">
+        <a class="content-link" href="" target="_blank">
+          {{ currentlang === 'ar' ? 'لينكد إن' : 'LinkedIn' }}
+        </a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="title">
+        <p>{{ currentlang === 'ar' ? 'العنوان' : 'Address' }}</p>
+      </div>
+      <div class="content">
+        <p>{{ currentlang === 'ar' ? 'كيتشورين، أنقرة، تركيا' : 'Keçiören Ankara Turkiye' }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row-line">
+  <div class="row-line-thick">
+    <div class="line-container"></div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.body {
+    width: 100vw;
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content fills the page */
+    background-color: #000E2D;
+}
+
+
+.header
+{
+    z-index: 2;
+    /* background: transparent; */
+}
+
+@media screen and (max-width: 1268px) {
+    .body {
+        overflow-x: hidden;
+    }
+}

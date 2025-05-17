@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face
+{
+    font-family: 'Roboto';
+    src: url('assets/Fonts/en/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+
+}
+.robo-semi-bold
+{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: normal;
+}
+.robo{
+    font-family: 'Roboto';
+}
+@font-face
+{
+    font-family: 'Outfit';
+    src: url('assets/Fonts/en/Outfit-VariableFont_wght.ttf') format('truetype');
+}
+.outfit
+{
+    font-family: 'Outfit';
+}
+.outfit-semi-bold
+{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: normal;
+
+
+}
+
+@font-face {
+    font-family: 'Cairo';
+    src: url('assets/Fonts/ar/static/Cairo-Medium.ttf') format('truetype');
+  }
+  
+  .arabic-font {
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+  }

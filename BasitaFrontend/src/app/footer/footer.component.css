@@ -1,0 +1,285 @@
+
+.thin-line
+{
+  width: 70%;
+  border-radius: 20px;
+
+  margin: 0 auto;
+  height: 4px;
+  background: linear-gradient(270deg,  #B514DE 0%,#6893F2  100%);
+  margin-bottom: 3%;
+}
+
+
+/* footer card */
+.cta-header {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 57px;
+    font-weight: 700;
+    line-height: 62.70px;
+    word-wrap: break-word;
+    text-transform: capitalize;
+    /* width: 300px; */
+    text-align: center;
+    height: 126px;
+    
+}
+
+
+
+.cta-background {
+    width: 70%;
+    height: 418px;
+    background: linear-gradient(303deg, #6893F2 5%, #B514DE 64%);
+    border-radius: 20px;
+    position: relative;
+    align-items: inherit;
+    margin: 0 auto;
+
+}
+
+.cta-text {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    font-family: 'Outfit';
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    word-wrap: break-word;
+    line-height: 27.5px;
+
+}
+
+
+
+.cta-button {
+    width: 256px; /* Fixed button width */
+    height: 72px; /* Fixed button height */
+    position: absolute; /* Positioned within the container */
+    bottom: 80px; /* 30px from the bottom of the parent */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Correctly align to center */
+    display: flex; /* Center content horizontally and vertically */
+    justify-content: center;
+    align-items: center;
+    background: black; /* Button background color */
+    color: white; /* Button text color */
+    border-radius: 10px; /* Rounded corners */
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-sizing: border-box; /* Ensure padding doesn't overflow width */
+}
+
+
+
+.cta-button button {
+    padding: 15px 40px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+
+
+/* footer details */
+
+.content-link
+{
+  color: #FFF;
+
+/* body text */
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 27.5px; /* 152.778% */
+text-decoration: none;
+}
+
+content-link:hover
+{
+  color: #00ff00; 
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    /* align-items: flex-start; */
+    /* padding: 20px 0; */
+    position: relative;
+    
+    
+}
+
+
+
+
+.row-line-thick
+{
+    /* cover the whole page width */
+    width: 100%;
+
+
+    border-radius: 20px;
+   
+    margin-top: 10%;
+   
+    
+    height: 8px;
+    background: linear-gradient(270deg, #6893F2 0%, #B514DE 100%);
+}
+
+
+.info-container {
+  width: 70%;
+  margin: 3% auto;
+  display: flex;
+  justify-content: flex-start;
+  /* gap: 20%; */
+}
+
+.title-grid {
+
+  font-size: 24px; /* Larger font size for the title */
+  font-weight: bold; /* Bold font for the title */
+  width: 45%;
+  
+}
+
+.content-grid {
+  display: flex;
+  gap: 28%;
+  width: 50%;
+
+  
+ 
+}
+
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+
+}
+
+
+.title {
+  color: white;
+  font-size: 24px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 27.50px;
+  word-wrap: break-word
+}
+
+.content {
+  text-align: center; /* Center the text */
+  color: white;
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 27.50px;
+  word-wrap: break-word;
+  display: flex;
+  margin-top: 5%;
+}
+
+  @media screen and (max-width: 1268px) {
+    .cta-background {
+      display: none !important;
+
+    }
+    .cta-button {
+      display: none !important;
+    }
+    .cta-text {
+      display: none !important;
+    }
+    .cta-header {
+      display: none !important;
+    }
+    .info-container {
+      width: 90% !important;
+      margin: 0 auto;
+      display: flex;
+     
+      
+    }
+    .title-grid {
+      
+      font-size: 20px;
+  
+    }
+    .content-grid {
+      display: flex;
+      gap: 3%;
+      width: 100%;
+    
+    }
+    .title {
+      font-size: 12px;
+    }
+    .content {
+      font-size: 12px; /* Ensure consistency */
+      margin-top: 2%; /* Reduce margin */
+      color: #FFF;
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 400;
+    }
+    .content-link {
+      font-size: 12px;
+    }
+    .title, .content, .content-link {
+      font-size: 12px !important; /* Ensures consistency */
+    }
+    .thin-line
+    {
+      width: 80%;
+      border-radius: 7px;
+  
+      margin: 0 auto;
+      height: 2px;
+      background: linear-gradient(270deg,  #B514DE 0%,#6893F2  100%);
+      margin-bottom: 5%;
+    }
+    .row-line-thick
+    {
+        /* cover the whole page width */
+        width: 100%;
+        
+  
+  
+        border-radius: 7px;
+       
+        margin-top: 5%;
+       
+        
+        height: 4px;
+        background: linear-gradient(270deg, #6893F2 0%, #B514DE 100%);
+    }
+    
+
+  
+  
+  
+  }
+

@@ -1,0 +1,32 @@
+<div class="hero-section">
+    <div class="">
+      <div class="row ">
+        <div class="col-md-8 text-section">
+
+          <h1 class="text_title outfit-semi-bold">{{ heroContent[0].title }}
+          </h1>
+          <p class="lead">
+            {{ heroContent[0].description }}
+          </p>
+          <!-- <h1 class="text_title outfit-semi-bold">نُمكِّن الأفكار ونحوّل التكنولوجيا</h1>
+<p class="lead">
+  من الحلول المدعومة بالذكاء الاصطناعي إلى تطوير الويب المخصص، نُحوّل أحدث التقنيات إلى واقع. دعنا نبني شيئًا استثنائيًا معًا.
+</p> -->
+<div class="button-group">
+  <button class="btn btn-buy" [routerLink]="['/contact-us']">
+    {{ selectedLanguage === 'ar' ? 'انضم إلينا' : 'Join Us' }}
+  </button>
+  <button class="btn btn-sell" [routerLink]="['/our-project']">
+    {{ selectedLanguage === 'ar' ? 'مشاريعنا' : 'Our Projects' }}
+  </button>
+</div>
+        </div>
+        <div class="col image-container text-end">
+         
+        
+            <img src="assets/img/NFTimage.jpg" class="img-fluid nft-image" alt="NFT Image">
+
+       </div>
+      </div>
+    </div>
+  </div>

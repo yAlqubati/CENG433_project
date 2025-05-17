@@ -1,0 +1,53 @@
+<title>our team</title>
+<div 
+  class="body" 
+  *ngIf="currentLang === 'ar' || currentLang === ''"
+  [style.direction]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+ <div class="eclips-purple">
+    <app-eclipse-purple></app-eclipse-purple>
+  </div>
+  <div class="clips-container">
+    <div class="eclipse-blue">
+      <app-eclipse-blue></app-eclipse-blue>
+    </div>
+  </div>
+<div class="vision-container">
+  <div class="vision-title ">
+    <p class="outfit-semi-bold">{{ visionContent[0].label }}</p>
+  </div>
+  <div class="vision-description">
+    <p>{{ visionContent[0].title }}
+    </p>
+  </div>
+  <div class="vision-text">
+    <p>{{ visionContent[0].description }}</p>
+  </div>
+</div>
+
+
+  <div class="description-container">    
+    <div class="card-info">
+          
+          <div class="card-body">
+            <div class="row  mb-3">
+              <p class="card-title outfit-semi-bold">{{ TeamData[0].title }}</p>
+            </div>
+            <p class="card-text">{{ TeamData[0].description }}
+            </p>
+          </div>
+        </div>
+      
+    
+  </div>
+
+  <div class="team-cards-container">
+    <div class="team-card">
+
+  
+      <div *ngFor="let member of teamMembers" class="">
+        <app-team-cards [member]="member"></app-team-cards>
+      </div>  
+      <!-- <app-team-cards ></app-team-cards> -->
+    </div>
+  </div>
+</div>

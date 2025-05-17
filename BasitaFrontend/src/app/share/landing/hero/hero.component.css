@@ -1,0 +1,262 @@
+
+.hero-section {
+    
+    
+    
+    /* min-height: 100vh; */
+    width: 70%;
+    /* overflow: hidden; */
+    margin: 0 auto;
+    /* background-color: #A03BE8; */
+    padding: 15px 0px;
+    z-index: 1;
+    /* background-color: #000E2D; */
+    background-color: transparent;
+    
+    
+ 
+  }
+  .text_title
+  {
+
+  }
+  
+  .hero-section .text-section h1 {
+    
+    color: white;
+    font-size: 87px;
+    font-family: Outfit;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 95.70px;
+    word-wrap: break-word;
+  }
+  
+  .hero-section .text-section .lead {
+    color: white;
+    font-size: 18px;
+    font-family: Roboto;
+    font-weight: 400;
+    line-height: 27.50px;
+    word-wrap: break-word;
+  }
+  
+  .hero-section .button-group {
+    margin-top: 30px;
+    /* background-color: #d4d4d4; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+    
+    
+  }
+  
+  .hero-section .btn-buy {
+    background-color: #B514DE;
+    border-color: #B514DE;
+    margin-right: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    width: 47%;
+    height: 69px;
+    text-align: center;
+    border-radius: 10px;
+
+  }
+  
+  .hero-section .btn-buy:hover {
+    background-color: #8214D3;
+  }
+  
+  .hero-section .btn-sell {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    font-family: 'Outfit';
+    margin-right: 20px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    width: 47%;
+    height: 69px;
+    /* min-height: 100%; */
+    text-align: center;
+    border-radius: 10px;
+
+  }
+  
+  .hero-section .btn-sell:hover {
+    background-color: #021233;
+    color: #000E2D;
+    color: #FFF;
+
+  }
+  
+
+  .featured-on {
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .featured-text {
+    color: #d4d4d4;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .featured-logos {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .featured-logos .logo {
+    max-height: 40px;
+    opacity: 0.7;
+  }
+  
+  .featured-logos .logo:hover {
+    opacity: 1;
+  }
+
+.nft-image {
+  /* padding-left: 0; */
+  /* padding-right: 0; */
+  /* margin-left: auto; */
+  /* max-width: 80%; */
+  /* margin-right: 100%; */
+  max-height: 90%;
+  /* border-radius: 20px; */
+  background-color: #A03BE8;
+}
+
+
+.text-section
+{
+  color: #FFF;
+/* H1 */
+font-family: Outfit;
+font-size: 87px;
+font-style: normal;
+font-weight: 700;
+line-height: 110%; /* 95.7px */
+text-transform: capitalize;
+}
+
+/* responsive */
+@media (max-width: 1268px) {
+  .hero-section {
+    width: 90%;
+    /* padding: 20px 0; */
+    /* margin: 0 auto; */
+    /* margin-top: 3%; */
+  }
+  .text-section {
+    width: 100%; /* Full width */
+    padding: 20px; /* Add some spacing */
+    /* background-color: #d4d4d4; */
+  }
+
+  .text-section
+  {
+    font-size: 40px;
+  }
+  .hero-section .text-section h1 {
+    font-size: 30px;
+    line-height: 1.0;
+    width: 100%;
+    text-align: center;
+    word-wrap: normal; /* Ensures long words break properly */
+    white-space: normal; /* Allows wrapping */
+    /* margin: 0 auto 10%; */
+    margin-bottom: 6%;
+}
+.line
+{
+  /* margin: 0 auto; */
+  width: 100%;
+  height: 1px;
+  background-color: #FFF;
+ 
+  /* margin-bottom: 30px; */
+  margin-bottom: 10%;
+}
+
+
+  .hero-section .text-section .lead {
+    font-size: 11px;
+    line-height: 14px; /* 127.273% */
+        margin-bottom: 10%;
+    word-break: break-word;
+    /* background-color: #A03BE8; */
+    width: 100%;
+    /* background-color: #A03BE8; */
+    /* justify-content: center; */
+    text-align: center;
+    /* height: 10px; */
+    /* height: 15%; */
+    font-style: normal;
+    font-weight: 400 ;
+    font-family: Roboto;
+
+  }
+
+.hero-section .button-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero-section .button-group button {
+    display: flex; /* Ensures no extra spacing */
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+
+  .hero-section .btn-buy {
+    /* margin-right: 0; */
+    
+    /* size */
+    /* padding: 10px 20px; */
+    width: 48%;
+    border-radius: 7px;
+    height: 45px;
+  }
+  /* size of the buttons */
+  .hero-section .btn-sell {
+    /* padding: 10px 20px; */
+    width: 48%;
+    border-radius: 7px;
+    height: 45px;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .nft-image {
+    /* padding-left: 0; */
+    /* padding-right: 0; */
+    /* margin-left: auto; */
+    /* max-width: 80%; */
+    /* margin-right: 100%; */
+    max-height: 90%;
+    /* border-radius: 20px; */
+    background-color: #A03BE8;
+
+    margin: 0 auto;
+    justify-content: center !important;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    
+
+
+    
+  
+    
+  }
+}
+  

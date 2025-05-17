@@ -1,0 +1,116 @@
+
+.card-container {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    cursor: auto;
+}
+
+
+.card-title
+{
+    color: #006AE1;
+
+    /* button */
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27.5px; /* 137.5% */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+.card-text
+{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    color: #FFF;
+
+    /* H2 */
+    font-family: Outfit;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 550;
+    line-height: 100%; /* 62.7px */
+    text-transform: capitalize;
+    
+}
+
+.text-decripstion
+{
+    margin-top: 3%;
+    width: 80%;
+    /* text-align: center; */
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFF;
+    
+   
+/* body text */
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 27.5px; /* 152.778% */
+margin-bottom: 3%;
+/* margin-right: 3%; */
+
+
+}
+
+@media screen and (max-width: 1268px) {
+    .card-container {
+        min-height: 250px; /* Ensure enough space for the title */
+        overflow: hidden;
+        text-align: center;
+        justify-items: center;
+        justify-content: center;
+        transition: all 1s ease-in-out;
+        cursor: pointer;
+    }
+
+    .text-description {
+        display: none; /* Hide on mobile by default */
+    }
+
+    .expanded .text-decripstion {
+        display: block; /* Show when expanded */
+    }
+
+    .expanded {
+        max-height: 1000px; /* Adjust based on content */
+    }
+    .card-text {
+        margin-top: -3%;
+        font-size: 25px;
+        line-height: 25px;
+        /* word-break: break-all; */
+        /* make it to break  */
+        word-wrap: break-word;
+        width: 90%;
+        text-align: center;
+        justify-content: center;
+    }
+    .card-title {
+        /* margin-top: -3%; */
+        margin-bottom: 3%;
+        font-size: 18px;
+        line-height: 25px;
+    }
+    .text-decripstion {
+        font-size: 14px;
+        line-height: 20px;
+        word-wrap: break-word;
+        text-align: center;
+        display: none;
+        
+
+    }
+
+
+    
+}

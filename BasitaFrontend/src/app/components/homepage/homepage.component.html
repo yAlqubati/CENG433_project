@@ -1,0 +1,33 @@
+<title>Homepage</title>
+<div 
+  class="body" 
+  *ngIf="currentLang === 'ar' || currentLang === ''"
+  [style.direction]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+       <!-- <app-service-cards></app-service-cards> -->
+        <div class="eclips-purple">
+              <app-eclipse-purple></app-eclipse-purple>
+        </div>
+       
+       <div class="eclipse-blue">
+              <app-eclipse-blue></app-eclipse-blue>
+       </div>
+       <div class="hero">
+              <app-hero></app-hero>
+       </div>
+       <div class="logo">
+              <app-logos></app-logos>
+       </div>
+       <div class="project-card ">
+              
+              <app-our-project-card [projects]="projects"></app-our-project-card>
+            </div>
+      
+
+       
+       
+        <!-- <app-service-cards></app-service-cards> -->
+
+    
+ </div>
+
+<!-- <app-team-cards></app-team-cards> -->

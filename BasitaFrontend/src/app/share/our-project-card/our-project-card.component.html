@@ -1,0 +1,36 @@
+
+    <div class="our-project-card-container">
+        <div class="card-container" *ngFor="let project of projects; let i = index">
+            <ng-container *ngIf="i % 2 === 0; else reverseOrder">
+                <div class="image-container">
+                    <img class="image" [src]="project.image" alt="{{ project.projectName }}" />
+
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="mobile-title">projects</div>
+                        <div class="title">{{ project.projectName }}</div>
+                        <div class="description">{{ project.briefDescription }}</div>
+                        <div class="details">{{ project.detailedDescription }}</div>
+                        <!-- <div class="label">{{ project.orderOfDisplay }}</div> -->
+                    </div>
+                </div>
+            </ng-container>
+            <ng-template #reverseOrder>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="mobile-title">projects</div>
+                        <div class="title">{{ project.projectName }}</div>
+                        <div class="description">{{ project.briefDescription }}</div>
+                        <div class="details">{{ project.detailedDescription }}</div>
+
+                        <!-- <div class="label">{{ project.orderOfDisplay }}</div> -->
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img class="image" [src]="project.image" />
+                </div>
+            </ng-template>
+        </div>
+    </div>
+    

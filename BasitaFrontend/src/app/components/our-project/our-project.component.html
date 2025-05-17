@@ -1,0 +1,39 @@
+<!-- <p>our-project works!</p> -->
+<title>Our Projects</title>
+<div class="body">
+
+
+
+
+<div 
+  class="projects-section" 
+  *ngIf="currentLang === 'ar' || currentLang === ''"
+  [style.direction]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+        <span class="projects-label outfit-semi-bold">{{ content[0].label }}</span>
+        <!-- <span class="projects-title">Our projects</span> -->
+        <span class="projects-subtitle">{{ content[0].title }}
+        </span>
+        <p class="projects-description">
+            {{ content[0].description }}
+        </p>
+    </div>
+
+<div class="eclips-purple">
+    <app-eclipse-purple></app-eclipse-purple>
+</div>
+<div class="eclipse-blue">
+    <app-eclipse-blue></app-eclipse-blue>
+
+</div>
+<div class="project-container" 
+*ngIf="currentLang === 'ar' || currentLang === ''"
+[style.direction]="currentLang === 'ar' ? 'rtl' : 'ltr'">
+    <app-our-project-card [projects]="projects" ></app-our-project-card>
+
+
+</div>
+
+</div>  
+
+  
+    

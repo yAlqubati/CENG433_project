@@ -1,0 +1,69 @@
+<div 
+  class="header-container" 
+  *ngIf="selectedLanguage === 'en' || selectedLanguage === 'ar' || selectedLanguage === ''" 
+  [style.direction]="selectedLanguage === 'ar' ? 'rtl' : 'ltr'">
+
+  <!-- First Row -->
+  <div class="row top-right">
+    <div class="col-auto contactUs">
+      <button [routerLink]="['/contact-us']" routerLinkActive="active-link">
+        {{ selectedLanguage === 'ar' ? 'تواصل' : 'CONTACT' }}
+      </button>
+    </div>
+    <div class="col-auto lanBtn">
+      
+    </div>
+    <!-- Mobile Menu Button -->
+    <div class="col-auto menu-btn" (click)="toggleMenu()">☰</div>
+  </div>
+
+  <div class="line"></div>
+
+  <!-- Mobile Navigation Canvas -->
+  <div class="mobile-menu-overlay" *ngIf="isMenuOpen" (click)="closeMenu()"></div>
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+    <button class="close-btn" (click)="toggleMenu()">✖</button>
+    <ul>
+      <li><a [routerLink]="['/']" routerLinkActive="active-link" (click)="closeMenu()">
+        {{ selectedLanguage === 'ar' ? 'الصفحة الرئيسية' : 'HOMEPAGE' }}
+      </a></li>
+      <li><a [routerLink]="['/services']" routerLinkActive="active-link" (click)="closeMenu()">
+        {{ selectedLanguage === 'ar' ? 'خدماتنا' : 'OUR SERVICES' }}
+      </a></li>
+      <li><a [routerLink]="['/our-project']" routerLinkActive="active-link" (click)="closeMenu()">
+        {{ selectedLanguage === 'ar' ? 'مشاريعنا' : 'OUR PROJECTS' }}
+      </a></li>
+      <li><a [routerLink]="['/team']" routerLinkActive="active-link" (click)="closeMenu()">
+        {{ selectedLanguage === 'ar' ? 'أعضاء الفريق' : 'OUR MEMBERS' }}
+      </a></li>
+    </ul>
+  </div>
+
+  <!-- Second Row (Desktop Navigation) -->
+  <div class="row bottom-section">
+    <div class="col logo">
+      <a class="text-decoration-none list-unstyled" [routerLink]="['/']" >
+        <p class="logotext"></p>
+      </a>
+    </div>
+    <div class="col-auto">
+      <nav>
+        <ul>
+          <li><a [routerLink]="['/']" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+            {{ selectedLanguage === 'ar' ? 'الصفحة الرئيسية' : 'HOMEPAGE' }}
+          </a></li>
+          <li><a [routerLink]="['/services']" routerLinkActive="active-link">
+            {{ selectedLanguage === 'ar' ? 'خدماتنا' : 'OUR SERVICES' }}
+          </a></li>
+          <li><a [routerLink]="['/our-project']" routerLinkActive="active-link">
+            {{ selectedLanguage === 'ar' ? 'مشاريعنا' : 'OUR PROJECTS' }}
+          </a></li>
+          <li><a [routerLink]="['/team']" routerLinkActive="active-link">
+            {{ selectedLanguage === 'ar' ? 'أعضاء الفريق' : 'OUR MEMBERS' }}
+          </a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,21 @@
+.eclips
+{
+    position: absolute;
+
+    width: 713.157px;
+    height: 676.116px;
+    flex-shrink: 0;
+    background: #B514DE;
+    border-radius: 713.157px; /* Creates the eclipse shape */
+    opacity: 0.8;
+    filter: blur(167px);
+ 
+}
+
+
+@media screen and (max-width: 1268px) {
+    .eclips {
+        display: none;
+
+    }
+}

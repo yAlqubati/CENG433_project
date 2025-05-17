@@ -1,0 +1,28 @@
+<title>our services</title>
+<div class="body">
+
+
+  <div class="service-section ">
+      <span class="service-label outfit-semi-bold">{{ content[0].label }}</span>
+      <!-- <span class="projects-title">Our projects</span> -->
+      <span class="service-subtitle ">{{ content[0].title }}
+      </span>
+      <p class="service-description">
+          {{ content[0].description }}
+      </p>
+  </div>
+  <div class="eclips-purple">
+    <app-eclipse-purple></app-eclipse-purple>
+</div>
+<div class="eclipse-blue">
+    <app-eclipse-blue></app-eclipse-blue>
+
+</div>
+
+<div class="service-cards-container">
+<div class="service-cards" *ngFor="let service of serviceCards">
+  <app-service-cards [service]="service"></app-service-cards>
+</div>
+  
+</div>  
+</div>
