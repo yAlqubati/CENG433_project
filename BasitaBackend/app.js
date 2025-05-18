@@ -5,7 +5,6 @@ const morgan = require('morgan');
 const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
-const nodemailer = require('nodemailer');//added for email
 
 require('dotenv').config(); // Load environment variables
 
@@ -13,14 +12,13 @@ const projectsRouter = require('./routes/projectRoute');
 const servicesRouter = require('./routes/serviceRoute');
 const teamRouter = require('./routes/team-memberRoute');
 const adminRouter = require('./routes/adminRoute');
-const emailRouter = require('./routes/emailRoute');
 
 const app = express();
 app.use(cors());
 
 // temp to test github actions
 // connect to the database and start the server
-mongoose.connect('mongodb://localhost:27017/Basita')
+mongoose.connect('mongodb+srv://admin:temp@basita-cluster.foqtz.mongodb.net/?retryWrites=true&w=majority&appName=Basita-Cluster')
     .then(() =>{
         console.log('connected to mongodb');
         http.createServer(app).listen(3000);
@@ -45,7 +43,6 @@ app.use('/projects', projectsRouter);
 app.use('/services', servicesRouter);
 app.use('/team', teamRouter);
 app.use('/admin', adminRouter);
-app.use('/email',emailRouter);
 
 app.get('/health', (req, res) => {
     res.status(200).send('OK');
